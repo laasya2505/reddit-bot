@@ -17,7 +17,7 @@ reddit = praw.Reddit(
 )
 
 # Groq API setup
-GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"  # Ensure this endpoint is correct
+GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions"  
 GROQ_API_KEY = "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"
 
 # Content generator using Groq API
@@ -28,7 +28,7 @@ def generate_content_from_groq(prompt):
     }
 
     data = {
-        "model": "llama-3.3-70b-versatile",  # Replace with the correct model name
+        "model": "llama-3.3-70b-versatile",  
         "messages": [{"role": "user", "content": prompt}],
         "max_tokens": 150
     }
@@ -86,7 +86,7 @@ def daily_task():
     if post_content:
         post_to_reddit("test", "Daily AI Post", post_content)
 
-    comment_prompt = "Write a simple comment about the software development."
+    comment_prompt = "Write a simple comment about the new technologies."
     comment_on_posts("test", comment_prompt)
 
 # Schedule the task
